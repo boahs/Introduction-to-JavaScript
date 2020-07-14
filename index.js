@@ -114,23 +114,17 @@ annoyingSong(99);
 //and anything below 60 should be F
 
 function gradeCalc(a){
-    switch(a){
-        case a >= 90 && a <= 100: 
-        return 'A';
-        break;
-        case 80-89:
-        return 'B';
-        break;
-        case 70-79:
-        return 'C';
-        break;
-        case 60-69:
-        return 'D';
-        break;
-        case 1-59:
-        return 'F';
-        break;
-    }
+   if (a >= 90 && a <= 100){
+       return 'A'
+   }else if(a >= 80 && a <= 89){
+       return 'B'
+   }else if(a >= 70 && a <= 79){
+       return 'C'
+   }else if(a >= 60 && a <= 69){
+       return 'D'
+   }else{
+       return 'F'
+   }
 }
 
 
