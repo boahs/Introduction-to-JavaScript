@@ -190,3 +190,42 @@ countVowels(
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
+
+function rockPapersSissors() {
+  let personChoice = prompt("Rock, paper, or sissors?");
+
+  let phrase = "It's a draw!";
+
+  let compChoice = Math.random();
+
+  if (compChoice <= 0.33) {
+    compChoice = "rock";
+  } else if (compChoice > 0.33 && compChoice <= 0.66) {
+    compChoice = "scissors";
+  } else {
+    compChoice = "paper";
+  }
+  if (compChoice === "rock") {
+    if (personChoice === "paper") {
+      phrase = "You win";
+    } else if (personChoice === "scissors") {
+      phrase = "You lose";
+    }
+  }
+  if (compChoice === "scissors") {
+    if (personChoice === "rock") {
+      phrase = "You win!";
+    } else if (personChoice === "paper") {
+      phrase = "You lose!";
+    }
+  }
+  if (compChoice === "paper") {
+    if (personChoice === "rock") {
+      phrase = "You lose!";
+    } else if (personChoice === "scissors") {
+      phrase = "You win!";
+    }
+  }
+
+  return phrase;
+}
