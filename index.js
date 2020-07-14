@@ -78,30 +78,30 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
-function game() {
-    let userChoice = prompt('Do you choose rock, paper or sissors?');
-    let compare = 
-}
+let ai = Math.random();
 
+function game() {}
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-function convert(a){
-    return a * 0.62;
+function convert(a) {
+  return a * 0.62;
 }
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-function feetToCM(a){
-    return a * 30.48;
+function feetToCM(a) {
+  return a * 30.48;
 }
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-function annoyingSong(a){
-    for (let i = a; i > 0; i--){
-        console.log(`${i} bottles of soda on the walll, ${i} bottles of soda, take one pass it around ${i-1} bottlles of soda on the wall`);
-    }
+function annoyingSong(a) {
+  for (let i = a; i > 0; i--) {
+    console.log(
+      `${i} bottles of soda on the walll, ${i} bottles of soda, take one pass it around ${i--} bottlles of soda on the wall`
+    );
+  }
 }
 annoyingSong(99);
 /************************************************************** Task 7 **************************************************************/
@@ -113,22 +113,21 @@ annoyingSong(99);
 //60s should be D
 //and anything below 60 should be F
 
-function gradeCalc(a){
-   if (a >= 90 && a <= 100){
-       return 'A'
-   }else if(a >= 80 && a <= 89){
-       return 'B'
-   }else if(a >= 70 && a <= 79){
-       return 'C'
-   }else if(a >= 60 && a <= 69){
-       return 'D'
-   }else{
-       return 'F'
-   }
+function gradeCalc(a) {
+  if (a >= 90 && a <= 100) {
+    return "A";
+  } else if (a >= 80 && a <= 89) {
+    return "B";
+  } else if (a >= 70 && a <= 79) {
+    return "C";
+  } else if (a >= 60 && a <= 69) {
+    return "D";
+  } else {
+    return "F";
+  }
 }
 
 gradeCalc(85);
-
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
