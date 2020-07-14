@@ -14,8 +14,8 @@ while (a < b) {
   a++;
 }
 console.log(a);
-
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
+
 console.log(Number("1999"));
 
 //Task d: Write a function to multiply a*b
@@ -34,8 +34,34 @@ function dogYears(age, dYears) {
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
+function dogFeeder(weight, age){
+    if (age >= 1){
+        if (weight <= 5){
+            return (weight * .05);
+        }else if (weight <= 10){
+            return (weight * .04)
+        }else if (weight <= 15){
+            return (weight * .03);
+        }else{
+            return (weight * .02)
+        }
+    }else {
+        if (age>= 2/12 && age < 4/12){
+            return (weight * .10);
 
-//feeding requirements
+        } else if(age >= 4/12 && age < 7/12){
+            return (weight * .05);
+        } else if(age >= 7/12 && age < 12/12){
+            return (weight * .04)
+        }
+    }
+}
+console.log(dogFeeder(15,1));
+
+
+
+
+// feeding requirements
 // adult dogs at least 1 year
 // up to 5 lbs - 5% of their body weight
 // 6 - 10 lbs - 4% of their body weight
@@ -55,6 +81,8 @@ function dogYears(age, dYears) {
 // it should return you won or you lost based on the rules of the game (you may need to look up the rules if you have not played before)
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
+
+if 
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
