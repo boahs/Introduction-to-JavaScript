@@ -169,6 +169,21 @@ gradeCalc(85);
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
 
+function vowel_count(str) {
+  var vowel_list = "aeiouAEIOU";
+  var vcount = 0;
+
+  for (var i = 0; i < str.length; i++) {
+    if (vowel_list.indexOf(str[i]) !== -1) {
+      vcount += 1;
+    }
+  }
+  return vcount;
+}
+console.log(
+  vowel_count("I am containing some vowels. But how many am I containing?")
+);
+
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
 //update your rock papers sissors code below to take a prompt from a user using the window object
