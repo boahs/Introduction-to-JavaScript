@@ -113,6 +113,27 @@ annoyingSong(99);
 //60s should be D
 //and anything below 60 should be F
 
+function gradeCalc(a){
+    switch(a){
+        case a >= 90 && a <= 100: 
+        return 'A';
+        break;
+        case 80-89:
+        return 'B';
+        break;
+        case 70-79:
+        return 'C';
+        break;
+        case 60-69:
+        return 'D';
+        break;
+        case 1-59:
+        return 'F';
+        break;
+    }
+}
+
+
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
 // Hint - you may need to study tomorrow's traning kit on arrays
