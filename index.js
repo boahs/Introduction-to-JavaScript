@@ -78,9 +78,44 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
-let ai = Math.random();
+function rockPapersSissors(shoot) {
+  let phrase = "It's a draw!";
 
-function game() {}
+  let compChoice = Math.random();
+
+  if (compChoice <= 0.33) {
+    compChoice = "rock";
+  } else if (compChoice > 0.33 && compChoice <= 0.66) {
+    compChoice = "scissors";
+  } else {
+    compChoice = "paper";
+  }
+
+  if (compChoice === "rock") {
+    if (shoot === "paper") {
+      phrase = "You win";
+    } else if (shoot === "scissors") {
+      phrase = "You lose";
+    }
+  }
+  if (compChoice === "scissors") {
+    if (shoot === "rock") {
+      phrase = "You win!";
+    } else if (shoot === "paper") {
+      phrase = "You lose!";
+    }
+  }
+  if (compChoice === "paper") {
+    if (shoot === "rock") {
+      phrase = "You lose!";
+    } else if (shoot === "scissors") {
+      phrase = "You win!";
+    }
+  }
+  return phrase;
+}
+
+rockPapersSissors("paper");
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
