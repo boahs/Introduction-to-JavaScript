@@ -127,6 +127,8 @@ function gradeCalc(a){
    }
 }
 
+gradeCalc(85);
+
 
 /************************************************************** Stretch **************************************************************/
 //Create a function that counts the number of vowels within a string. It should handle both capitalized and uncapitalized vowels.
