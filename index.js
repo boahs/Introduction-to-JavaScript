@@ -34,32 +34,28 @@ function dogYears(age, dYears) {
 /************************************************************** Task 3 **************************************************************/
 //Dog feeder
 //takes weight in pounds and age in years (note if the dog is a puppy the age will be a decimal) and returns the number of pounds of raw food to feed in a day.
-function dogFeeder(weight, age){
-    if (age >= 1){
-        if (weight <= 5){
-            return (weight * .05);
-        }else if (weight <= 10){
-            return (weight * .04)
-        }else if (weight <= 15){
-            return (weight * .03);
-        }else{
-            return (weight * .02)
-        }
-    }else {
-        if (age>= 2/12 && age < 4/12){
-            return (weight * .10);
-
-        } else if(age >= 4/12 && age < 7/12){
-            return (weight * .05);
-        } else if(age >= 7/12 && age < 12/12){
-            return (weight * .04)
-        }
+function dogFeeder(weight, age) {
+  if (age >= 1) {
+    if (weight <= 5) {
+      return weight * 0.05;
+    } else if (weight <= 10) {
+      return weight * 0.04;
+    } else if (weight <= 15) {
+      return weight * 0.03;
+    } else {
+      return weight * 0.02;
     }
+  } else {
+    if (age >= 2 / 12 && age < 4 / 12) {
+      return weight * 0.1;
+    } else if (age >= 4 / 12 && age < 7 / 12) {
+      return weight * 0.05;
+    } else if (age >= 7 / 12 && age < 12 / 12) {
+      return weight * 0.04;
+    }
+  }
 }
-console.log(dogFeeder(15,1));
-
-
-
+console.log(dogFeeder(15, 1));
 
 // feeding requirements
 // adult dogs at least 1 year
@@ -82,19 +78,32 @@ console.log(dogFeeder(15,1));
 // use math.random to determine the computers choice
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number
 
-if 
+function game() {
+    let userChoice = prompt('Do you choose rock, paper or sissors?');
+    let compare = 
+}
+
 
 /************************************************************** Task 5 **************************************************************/
 //Metric Converter
 //a. KM to Miles - should take the number of kilometers and convert it to the equal number of miles
-
+function convert(a){
+    return a * 0.62;
+}
 //b. Feet to CM - should take the number of feet and convert it to the equal number of centimeters
-
+function feetToCM(a){
+    return a * 30.48;
+}
 /************************************************************** Task 6 **************************************************************/
 // 99 bottles of soda on the wall
 // create a function called annoyingSong
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
-
+function annoyingSong(a){
+    for (let i = a; i > 0; i--){
+        console.log(`${i} bottles of soda on the wall, ${i} bottles of soda, take one pass it around ${i - 1} bottles of soda on the wall`);
+    }
+}
+annoyingSong(99);
 /************************************************************** Task 7 **************************************************************/
 //Grade Calculator
 //write a javaScript program that takes a mark out of 100 and returns a corisponding letter grade
