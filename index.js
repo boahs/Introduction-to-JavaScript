@@ -169,19 +169,22 @@ gradeCalc(85);
 // Hint - you may need to study tomorrow's traning kit on arrays
 // try looking up the .includes() method
 
-function vowel_count(str) {
-  var vowel_list = "aeiouAEIOU";
-  var vcount = 0;
+const vowels = ["a", "e", "i", "o", "u"];
 
-  for (var i = 0; i < str.length; i++) {
-    if (vowel_list.indexOf(str[i]) !== -1) {
-      vcount += 1;
+function countVowels(str) {
+  let numVowels = 0;
+  let lowerStr = str.toLowerCase();
+
+  for (let i = 0; i < str.length; i++) {
+    if (vowels.includes(lowerStr[i])) {
+      numVowels++;
     }
   }
-  return vcount;
+  return numVowels;
 }
-console.log(
-  vowel_count("I am containing some vowels. But how many am I containing?")
+
+countVowels(
+  "Testing on this loNg string that mIGht have a bunch of vowels and PUNCTUATION!"
 );
 
 /************************************************************** Stretch **************************************************************/
