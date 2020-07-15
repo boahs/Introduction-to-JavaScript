@@ -19,7 +19,7 @@ console.log(a);
 console.log(Number("1999"));
 
 //Task d: Write a function to multiply a*b
-const add = (a, b) => a + b;
+const add = (a, b) => a * b;
 console.log(add(3, 15));
 
 /************************************************************** Task 2 **************************************************************/
